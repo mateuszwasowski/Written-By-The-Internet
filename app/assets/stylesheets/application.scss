@@ -1,0 +1,165 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'normalize';
+
+body{
+ background-color: darken(deepskyblue,15%);
+  color: whitesmoke;
+}
+
+.footer{
+  font-size:0.75em;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align:center;
+  padding-bottom: 5px;
+  
+}
+
+#h_background{
+  
+ background: deepskyblue;
+     border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  
+}
+
+.header {
+  list-style: none;
+  margin: 0 auto; 
+  
+  max-width: 1000px;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
+
+
+}
+
+.header a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: whitesmoke;
+}
+
+.header a:hover {
+  background: darken(deepskyblue, 2%);
+}
+
+.header #logo {
+
+  a:hover{
+    background: deepskyblue;
+  }
+  }
+
+.nav{
+  list-style: none;
+  margin: 0 auto; 
+  padding: 0;
+  max-width: 1000px;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  
+  
+  li{
+    padding: 1em;
+  width: 400px;
+  font-size: 1em;
+  text-align: center;
+  background-color:  rgba(0, 0, 0, 0.20);
+    
+  }
+    
+
+  li:hover{
+     background-color: darken(deepskyblue,15%);
+    }
+  
+  #current_page{
+    background-color: darken(deepskyblue,15%);
+  }
+  
+  a{
+     text-decoration: none; 
+    color: whitesmoke;
+  }
+  
+}
+.content{
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+  color:black;
+  font-size:0.90em;
+
+  //x-moz-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
+ // -webkit-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
+  //box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
+}
+
+@media all and (max-width: 800px) {
+  .header {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .header {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .header a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .header li:last-of-type a {
+    border-bottom: none;
+  }
+  .header #logo{
+
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: block;
+  a:hover{
+    background: deepskyblue;
+  }
+  }
+}
+
