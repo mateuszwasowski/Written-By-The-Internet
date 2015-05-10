@@ -12,10 +12,10 @@
   <li ><%= link_to "Write", write_path %></li>
 <% end %>
   
-<% if current_page?(pages_path)  %>
-  <li id = "current_page"><%= link_to "Vote", write_path %></li>
+  <% if current_page?(vote_path)  %>
+  <li id = "current_page"><%= link_to "Vote", vote_path %></li>
 <% else %>
-  <li><%= link_to "Vote", write_path %></li>
+  <li><%= link_to "Vote", vote_path %></li>
 <% end %>
   
 </div>

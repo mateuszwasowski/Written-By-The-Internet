@@ -1,0 +1,19 @@
+<% if @para_last != nil %>
+<div class = "cont">
+
+    Last Paragraph:
+        
+       <br><div class="newpara"> 
+        <p class="author">written by <br> <%= @para_last.author %></p>
+      
+        <p class="text"> <%= @para_last.parag %></p>
+  
+      </div>
+
+</div>
+
+<% end %>
+
+
+<br>
+<%= render 'form' %>

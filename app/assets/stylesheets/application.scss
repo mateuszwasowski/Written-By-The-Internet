@@ -15,6 +15,8 @@
  */
 @import 'normalize';
 
+
+
 body{
  background-color: darken(deepskyblue,15%);
   color: whitesmoke;
@@ -112,19 +114,7 @@ body{
   }
   
 }
-.content{
-  box-sizing: border-box;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background-color: whitesmoke;
-  color:black;
-  font-size:0.90em;
 
-  //x-moz-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
- // -webkit-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
-  //box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
-}
 
 @media all and (max-width: 800px) {
   .header {

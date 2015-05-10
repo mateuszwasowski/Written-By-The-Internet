@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author: MyString
+  parag: MyText
+  main: false
+  main_id: 1
+
+two:
+  author: MyString
+  parag: MyText
+  main: false
+  main_id: 1

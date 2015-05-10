@@ -1,0 +1,26 @@
+<%= form_for(@paragraph) do |f| %>
+  <% if @paragraph.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@paragraph.errors.count, "error") %> prohibited this paragraph from being saved:</h2>
+      <ul>
+      <% @paragraph.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+<%= link_to 'Back', write_path(@paragraph) %>
+  <% else %>
+    <div class="field">
+      <%= f.label :author %><br>
+      <%= f.text_field :author , :placeholder => 'This will be automatic' %>
+    </div>
+    <div class="field">
+      <%= f.label :parag, 'Write your own paragraph below:'%><br>
+      <%= f.text_area :parag ,:placeholder => 'Text goes here ;)'%>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% end %>

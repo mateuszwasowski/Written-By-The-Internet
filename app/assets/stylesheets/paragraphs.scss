@@ -1,12 +1,13 @@
-// Place all the styles related to the pages controller here.
+// Place all the styles related to the Paragraphs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.pages{
+
+.content{
   box-sizing: border-box;
   max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 20px;
-  background-color: whitesmoke;
+  background-color:  rgba(0, 0, 0, 0.20);
   color:black;
   font-size:0.90em;
 
@@ -14,35 +15,7 @@
  // -webkit-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
   //box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
 }
-.top{
- 
-  padding: 50px 50px 50px 50px;
-  box-sizing: border-box;
-  .pagination{
-    float:right;
-    font-style: italic;
-  }
-}
-.bottom{
-  
-  padding: 50px 50px 50px 50px;
-  box-sizing: border-box;
-  
-  .pagination{
-    text-align: center;
-    font-style: italic;
-    margin:0 auto;
-  }
-  
-}
-
-.chapter{
-  font-style: italic;
-  float: left;
-}
-
 .cont{
-background-color: whitesmoke;
  padding:10px 50px 50px 50px;
 }
 .newpara{
@@ -72,4 +45,35 @@ background-color: whitesmoke;
   text-align: right;
   color:darken(deepskyblue,20%);
   
+}
+
+.field {
+ text-align: center;
+  label{
+   color:whitesmoke;
+
+  }
+  
+  textarea{
+    width:800px;
+    height:200px;
+
+  }
+  
+}
+.actions{
+text-align: center;
+  input{
+    
+    padding: 10px 30px 10px 30px;
+    background-color: rgba(0, 0, 0, 0.20);
+    border: none;
+    color: whitesmoke;
+
+    text-shadow: 1px 1px 1px darken(deepskyblue,20%);
+  }
+  input:hover{
+    
+    background-color:darken(deepskyblue,0);
+  }
 }

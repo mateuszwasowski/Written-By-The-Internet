@@ -1,0 +1,20 @@
+
+ <div class = "cont">
+<div id="notice"><%= notice %></div>
+  <tbody>
+    <% @paragraphs.each do |paragraph| %>
+      <div class="newpara"> 
+        <p class="author">written by <br> <%=paragraph.author %></p>
+      
+        <p class="text"> <%= paragraph.parag %></p>
+        
+      </div>
+    <br>
+        <%= link_to 'Edit', edit_paragraph_path(paragraph) %>
+        <%= link_to 'Destroy', paragraph, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </tbody>
+
+
+<br>
+</div>
