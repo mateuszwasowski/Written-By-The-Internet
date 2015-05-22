@@ -56,11 +56,16 @@ body{
 
 }
 
-.header a {
+.header li {
   text-decoration: none;
   display: block;
-  padding: 1em;
-  color: whitesmoke;
+  padding: 1em 0 1em 0;
+  
+  
+}
+.header a{
+ color: whitesmoke; 
+ padding: 1em;
 }
 
 .header a:hover {
@@ -114,6 +119,7 @@ body{
   }
   
 }
+
 
 
 @media all and (max-width: 800px) {

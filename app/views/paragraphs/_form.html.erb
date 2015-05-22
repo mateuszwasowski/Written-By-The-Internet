@@ -1,6 +1,7 @@
+
 <%= form_for(@paragraph) do |f| %>
   <% if @paragraph.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert">
       <h2><%= pluralize(@paragraph.errors.count, "error") %> prohibited this paragraph from being saved:</h2>
       <ul>
       <% @paragraph.errors.full_messages.each do |message| %>
@@ -11,8 +12,9 @@
 <%= link_to 'Back', write_path(@paragraph) %>
   <% else %>
     <div class="field">
-      <%= f.label :author %><br>
-      <%= f.text_field :author , :placeholder => 'This will be automatic' %>
+      <% f.label :author %><br>
+      <% f.text_field :author %>
+      <p><%= @author %> </p>
     </div>
     <div class="field">
       <%= f.label :parag, 'Write your own paragraph below:'%><br>

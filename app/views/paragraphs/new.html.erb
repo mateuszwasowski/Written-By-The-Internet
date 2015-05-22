@@ -1,7 +1,7 @@
 <% if @para_last != nil %>
 <div class = "cont">
 
-    Last Paragraph:
+    Last published paragraph:
         
        <br><div class="newpara"> 
         <p class="author">written by <br> <%= @para_last.author %></p>
@@ -14,6 +14,9 @@
 
 <% end %>
 
-
+<div class= "instructions">
+  <p class = "h_field">Submit your paragraph proposition</p>
 <br>
+
 <%= render 'form' %>
+</div>

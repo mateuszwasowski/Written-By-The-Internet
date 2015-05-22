@@ -1,20 +1,55 @@
 
- <div class = "cont">
-<div id="notice"><%= notice %></div>
+
+  <% if @para_last != nil %>
+<div class = "cont">
+
+    Last published paragraph:
+        
+       <br><div class="newpara"> 
+        <p class="author">written by <br> <%= @para_last.author %></p>
+      
+        <p class="text"> <%= @para_last.parag %></p>
+  
+      </div>
+
+</div>
+
+<% end %>
+
+
+<div class = "instructions">
+<p class = "h_field">Upvote best paragraph propositions,</p>
+<p>and watch them get published.</p>
+
+</div>
+
+<div class = "cont">
+  <table>
   <tbody>
     <% @paragraphs.each do |paragraph| %>
       <div class="newpara"> 
-        <p class="author">written by <br> <%=paragraph.author %></p>
+        <p class="author">proposed by <br><%= paragraph.author %></p>
       
         <p class="text"> <%= paragraph.parag %></p>
-        
       </div>
     <br>
-        <%= link_to 'Edit', edit_paragraph_path(paragraph) %>
-        <%= link_to 'Destroy', paragraph, method: :delete, data: { confirm: 'Are you sure?' } %>
+    
+    <% if current_user.id ==  paragraph.user_id %>
+    
+    <%= link_to 'Edit', edit_paragraph_path(paragraph) %>
+    <%= link_to 'Destroy', paragraph, method: :delete, data: { confirm: 'Are you sure?' } %>
+    
     <% end %>
+    
+    <%= pluralize(paragraph.votes.count, "vote") %></td>
+  
+  <% if current_user.id !=  paragraph.user_id %>
+    <%= button_to '+1', upvote_paragraph_path(paragraph), method: :post %>
+    <% end %>
+  <% end %>
   </tbody>
-
+   </table>
+   <%= will_paginate @paragraphs , :page_links => false %>
 
 <br>
 </div>

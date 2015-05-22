@@ -19,9 +19,10 @@ pre {
 }
 
 a {
-  color: #000;
+  color: whitesmoke;
+  text-decoration: none;
   &:visited {
-    color: #666;
+    color: darken(whitesmoke, 25%);
   }
 
 }
@@ -30,25 +31,59 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
+  
+  .h_field{
+    color:whitesmoke;
+    text-align: center;
+    font-size: 5em;
+    padding: 30px  0px 30px 0px;
+  }
+  #min_char{
+    
+    color: darken(deepskyblue,40%);
+    
+    
+  }
 }
 
-#notice {
-  color: green;
+.notice {
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border-top:2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+.alert{
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border-top:2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  
+}
+
+.links {
+
+ color: whitesmoke;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border-top:2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
+  max-width: 1000px;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+
   h2 {
     text-align: left;
     font-weight: bold;

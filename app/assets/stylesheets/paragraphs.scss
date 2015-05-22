@@ -10,10 +10,6 @@
   background-color:  rgba(0, 0, 0, 0.20);
   color:black;
   font-size:0.90em;
-
-  //x-moz-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
- // -webkit-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
-  //box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
 }
 .cont{
  padding:10px 50px 50px 50px;
@@ -76,4 +72,28 @@ text-align: center;
     
     background-color:darken(deepskyblue,0);
   }
+}
+.instructions{
+  
+ 
+  border:2px solid rgba(0, 0, 0, 0.02);
+  max-width: 1000px;
+  p{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 2em;
+    padding-bottom: 30px;
+  }
+  .h_field{
+   padding: 30px  0px 0px 0px; 
+  }
+}
+
+.pagination {
+  .previous_page {  color:black }
+  .previous_page.disabled { color: #777 }
+  .current { background:rgba(0, 0, 0, 0.10) }
+  .next_page {  color: black }
+  .next_page.disabled { color: #777 }
+  text-align: center;
 }

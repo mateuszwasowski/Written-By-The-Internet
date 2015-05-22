@@ -9,10 +9,24 @@
 </head>
 <body>
 <%= render "shared/header" %>
+  <%= javascript_include_tag :defaults %>
+  
+  <% if %>
   <%= render "shared/nav" %>
+  
 <div class= "content">
+  <% if notice != nil %>
+   <div class="notice"><%= notice %></div>
+  <% end %>
+  <% if alert != nil %>
+       <div class="alert"><%= alert %></div>
+  <% end %>
+
     <%= yield %>
 </div>
+  <% else %>
+  <% redirect_if_not_user %>
+  <% end %>
 <%= render "shared/footer" %>
 </body>
 </html>
