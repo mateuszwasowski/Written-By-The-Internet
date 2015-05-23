@@ -1,23 +1,15 @@
 <% if @para_last != nil %>
-<div class = "cont">
-
-    Last published paragraph:
-        
-       <br><div class="newpara"> 
-        <p class="author">written by <br> <%= @para_last.author %> 
-  <% if current_user.try(:id) ==  @para_last.user_id %><br>
-          
-         (you)</p>
-        <% else %>
+<div class = "cont">Last published paragraph:<br>
+  <div class="newpara"> 
+    <p class="author">written by <br> <%= @para_last.author %> 
+      <% if current_user.try(:id) ==  @para_last.user_id %>
+        <br>(you)</p>
+      <% else %>
         </p>
-  <% end%>
-      
-        <p class="text"> <%= @para_last.parag %></p>
-  
-      </div>
-
+      <% end %>  
+    <p class="text"> <%= @para_last.parag %></p>
+  </div>
 </div>
-
 <% end %>
 
 <div class= "instructions">

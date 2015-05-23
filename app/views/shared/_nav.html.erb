@@ -1,18 +1,18 @@
 <div class= "nav">
   
-<% if current_page?(root_path)  %>
+<% if current_page?(root_path) %>
   <li id = "current_page"><%= link_to "Read", root_path  %></li> 
 <% else %>
   <li  ><%= link_to "Read", root_path  %></li> 
 <% end %>
   
-<% if current_page?(write_path)  %>
+<% if current_page?(write_path) %>
   <li  id = "current_page"><%= link_to "Write", write_path %></li>
 <% else %>
   <li ><%= link_to "Write", write_path %></li>
 <% end %>
   
-  <% if current_page?(vote_path) || current_page?(paragraphs_path)  %>
+  <% if current_page?(vote_path) || current_page?(paragraphs_path) %>
   <li id = "current_page"><%= link_to "Vote", vote_path %></li>
 <% else %>
   <li><%= link_to "Vote", vote_path %></li>

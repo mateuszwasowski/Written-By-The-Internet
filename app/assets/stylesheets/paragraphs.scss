@@ -88,6 +88,10 @@ text-align: center;
   .h_field{
    padding: 30px  0px 0px 0px; 
   }
+  
+  a{
+    color:black;
+  }
 }
 
 .pagination {
@@ -97,6 +101,36 @@ text-align: center;
   .next_page {  color: whitesmoke }
   .next_page.disabled { color: #777 }
   text-align: center;
+  
+  a, span{
+   padding: 5px 10px 5px 10px;
+   background-color:darken(deepskyblue,25%);
+   
+ 
+}
+}
+
+.votebutton{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  position:relative;
+  bottom:30px;
+  right: 50px;
+  
+  a{
+   color:black;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  input{
+  margin-right: 10px;
+  }
 }
 
 @media all and (max-width: 600px) {

@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
+  
+  root 'pages#index'
+  
 devise_for :users, :controllers => { registrations: 'registrations' }
   resources :paragraphs,  :except => :show do
   member do
     post 'upvote'
     post 'publish'
+    post 'new_chapter'
   end
 end
-
-  root 'pages#index'
-
-  resources :pages,  :except => :show
   
   get 'write' => 'paragraphs#new' 
   

@@ -1,34 +1,33 @@
 <div class= "pages">
-<div class= "top">
-<div class = "chapter"> Chapter 1: Lorem Ipsum</div>
-  <div class="pagination"><%= @page + 1 %></div>
+  <div class= "top">
     
-</div>
-
-<div class = "cont">
-
-
-<% @paragraphs.each do |paragraph| %>
-      <div class="newpara"> 
-        <p class="author">written by <br><%= paragraph.author %>
-          <% if current_user.try(:id) ==  paragraph.user_id %> (you)</p>
-        <% else %>
+    <div class="page"><%= @page + 1 %></div>  
+  </div>
+  <div class = "cont">
+    
+    <% @paragraphs.each do |paragraph| %>
+    <div class="newpara"> 
+      <p class="author">written by <br><%= paragraph.author %>
+        
+      <% if current_user.try(:id) ==  paragraph.user_id %>
+        (you)</p>
+      <% else %>
         </p>
-  <% end%>
-  
-        <p class="text"> <%= paragraph.parag %></p>
-      </div>
+      <% end %>
+      <p class="text"> <%= paragraph.parag %></p>
+    </div>
+    <% end %>
 
+    <div class= "bottom">
+      <div class="pagin">
+      
+        <%= link_to '<<' , root_path %>
+        <%= link_to 'prev', root_path(:page => @prev_page) %>
+        <%= link_to 'next', root_path(:page => @next_page) %>
+        <%= link_to '>>' , root_path(:page => @last_page) %>
 
-<% end %>
-    
-
-
-<div class= "bottom">
-   <%= link_to 'prev', root_path(:page => @prev_page) %>  <%= link_to 'next', root_path(:page => @next_page) %>
-</div>
-  <%   if current_user.try(:admin?) == false %>
+    </div>
  
-  <% end %>
-</div>
+      </div>
+  </div>
 </div>

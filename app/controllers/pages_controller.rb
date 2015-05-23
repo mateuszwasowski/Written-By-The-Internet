@@ -9,33 +9,11 @@ class PagesController < ApplicationController
     @paragraphs = Paragraph.where( :main => true, :main_id => @page)
     
   end
-  
-  def new
-
-    @page = Page.new
-
-  end
-  
- def create
-    
-   @page = Page.new
-    
-    respond_to do |format|
-      if @page.save
-        format.html { redirect_to root_path, notice: 'Page was successfully created.' }
-        format.json { render :show, status: :created, location: @paragraph }
-      else
-        format.html { render :new }
-        format.json { render json: @page.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   private
-  
-
   
   def page_params
   params.require(:page).permit(:page_id, :chapter, :text)
   end
+  
 end
