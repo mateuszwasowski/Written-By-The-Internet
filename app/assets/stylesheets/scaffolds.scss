@@ -37,6 +37,7 @@ div {
     text-align: center;
     font-size: 5em;
     padding: 30px  0px 30px 0px;
+     text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
   }
   #min_char{
     
@@ -98,4 +99,16 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+@media all and (max-width: 600px) {
+  .newpara{
+ flex-wrap: wrap;
+justify-content: space-around;
+    .author{
+     text-align: center; 
+    }
+  
+}
+  
+
 }

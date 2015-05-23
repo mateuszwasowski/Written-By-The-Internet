@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522210346) do
+ActiveRecord::Schema.define(version: 20150523100320) do
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "chapter"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "text"
+    t.integer  "page_id"
+  end
 
   create_table "paragraphs", force: :cascade do |t|
     t.string   "author"
@@ -48,6 +56,7 @@ ActiveRecord::Schema.define(version: 20150522210346) do
     t.integer  "paragraph_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
   end
 
 end

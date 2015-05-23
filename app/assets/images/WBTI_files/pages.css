@@ -1,0 +1,101 @@
+/* line 4, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.pages {
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 0.90em;
+}
+
+/* line 17, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.top {
+  padding: 50px 50px 50px 50px;
+  box-sizing: border-box;
+}
+/* line 21, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.top .pagination {
+  float: right;
+  font-style: italic;
+}
+
+/* line 26, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.bottom {
+  padding: 50px 50px 50px 50px;
+  box-sizing: border-box;
+}
+/* line 31, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.bottom .pagination {
+  text-align: center;
+  font-style: italic;
+  margin: 0 auto;
+}
+
+/* line 39, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.chapter {
+  font-style: italic;
+  float: left;
+}
+
+/* line 44, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.cont {
+  background-color: whitesmoke;
+  padding: 10px 50px 50px 50px;
+}
+
+/* line 48, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.newpara {
+  margin: 0 0px -30px 0px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* line 61, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.text {
+  max-width: 700px;
+}
+
+/* line 66, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.author {
+  box-sizing: border-box;
+  padding-right: 15px;
+  width: 200px;
+  text-align: right;
+  color: #007399;
+}
+
+/* line 77, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.paginate_pages {
+  text-align: center;
+}
+/* line 78, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.paginate_pages a {
+  color: black;
+  text-decoration: none;
+}
+/* line 82, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.paginate_pages .previous_page {
+  color: black;
+}
+/* line 83, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.paginate_pages .previous_page.disabled {
+  color: dimgray;
+}
+/* line 84, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.paginate_pages .current {
+  background: rgba(0, 0, 0, 0.15);
+}
+/* line 85, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.paginate_pages .next_page {
+  color: black;
+}
+/* line 86, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/pages.scss */
+.paginate_pages .next_page.disabled {
+  color: dimgray;
+}

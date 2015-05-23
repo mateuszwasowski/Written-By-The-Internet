@@ -3,10 +3,13 @@ devise_for :users, :controllers => { registrations: 'registrations' }
   resources :paragraphs,  :except => :show do
   member do
     post 'upvote'
+    post 'publish'
   end
 end
 
   root 'pages#index'
+
+  resources :pages,  :except => :show
   
   get 'write' => 'paragraphs#new' 
   

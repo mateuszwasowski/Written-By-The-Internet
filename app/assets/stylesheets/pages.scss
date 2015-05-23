@@ -4,15 +4,17 @@
 .pages{
   box-sizing: border-box;
   max-width: 1000px;
+  height: 1100px;
   margin: 0 auto;
   margin-bottom: 20px;
   background-color: whitesmoke;
   color:black;
   font-size:0.90em;
+  position: relative;
 
-  //x-moz-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
- // -webkit-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
-  //box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
+//  x-moz-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
+ //-webkit-box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
+ // box-shadow: 0 0 5px 5px darken(deepskyblue, 30%);
 }
 .top{
  
@@ -27,6 +29,10 @@
   
   padding: 50px 50px 50px 50px;
   box-sizing: border-box;
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  right: 0;
   
   .pagination{
     text-align: center;
@@ -61,6 +67,7 @@ background-color: whitesmoke;
 .text{
 
   max-width:700px;
+  padding-bottom: 5px;
 
 }
 .author{
@@ -71,5 +78,22 @@ background-color: whitesmoke;
 
   text-align: right;
   color:darken(deepskyblue,20%);
+  
+}
+.paginate_pages{
+  color:black;
+  text-decoration: none;
+ a:visited{
+   color:darken(deepskyblue,35%);
+   text-decoration: none;
+ }  
+  
+ .previous_page {  color:black}
+  .previous_page.disabled { color: dimgray }
+  .current { background:rgba(0, 0, 0, 0.15) }
+  .next_page {  color: black}
+  .next_page.disabled {color: dimgray}
+  text-align: center; 
+
   
 }

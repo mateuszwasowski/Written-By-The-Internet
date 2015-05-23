@@ -6,10 +6,9 @@ class ParagraphsController < ApplicationController
   # GET /paragraphs.json
   def index
  
-    @paragraphs = Paragraph.all
-    @paragraphs = Paragraph.order('created_at DESC').paginate(:page => params[:page], :per_page => 1)
+    @paragraphs = Paragraph.where(:main => nil).order('created_at DESC').paginate(:page => params[:page], :per_page => 1)
     
-    @para_last = Paragraph.last
+    @para_last = Paragraph.where(:main => true).last
   end
 
   # GET /paragraphs/1
@@ -21,7 +20,7 @@ class ParagraphsController < ApplicationController
   # GET /paragraphs/new
   def new
     
-    @para_last = Paragraph.last
+   @para_last = Paragraph.where(:main => true).last
     @paragraph = Paragraph.new
     
   end
@@ -31,7 +30,7 @@ class ParagraphsController < ApplicationController
     @paragraph = set_paragraph
     
     if current_user.id != @paragraph.user_id
-      redirect_to vote_path
+      redirect_to :back
     end
   end
 
@@ -59,9 +58,10 @@ class ParagraphsController < ApplicationController
   def update
     
     @paragraph = set_paragraph
+    @paragraph.votes.destroy_all
     
     if current_user.id != @paragraph.user_id
-      redirect_to vote_path
+      redirect_to :back
     end
     respond_to do |format|
       if @paragraph.update(paragraph_params)
@@ -87,17 +87,60 @@ class ParagraphsController < ApplicationController
   def upvote
 
   @paragraph = set_paragraph
+    if @paragraph.votes.where(:user_id => current_user.id).exists?  
+      
+      redirect_to :back
+    else
+      @paragraph.votes.create(:user_id => current_user.id)
+      redirect_to :back
+    end
+  end
   
-  @paragraph.votes.create
+  def publish
+    last_page = 0
+    Paragraph.where(:main => true ).each do |para|  
+      if para.main_id.to_i > last_page
+        last_page = para.main_id
+      end
+    end
+    @paragraph = set_paragraph
+    @paragraph.main = true
+    
+    if if_enough?(@paragraph.parag.length, last_page) 
+      @paragraph.main_id = last_page
+    @paragraph.save
+    else
+      @paragraph.main_id = last_page.to_i + 1 
+    @paragraph.save
+    end
+    
+    Paragraph.where(:main_id => nil).destroy_all
+    
     redirect_to :back
   end
 
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    
     def author
       return "#{current_user.first_name} #{current_user.last_name}"
     end
+  
+  def if_enough?(this_para_length, last_page)
+    temp = 0
+    a = Paragraph.where(:main => true , :main_id => last_page)
+    a.each do |paragraph|
+      temp += paragraph.parag.length
+    end
+    
+    if (temp + this_para_length) < 5000
+      return true
+    else
+      return false
+    end 
+    
+  end
   
   
     def set_paragraph

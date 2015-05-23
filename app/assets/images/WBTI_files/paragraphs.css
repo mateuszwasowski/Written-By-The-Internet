@@ -1,0 +1,127 @@
+/* line 5, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.content {
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
+  font-size: 0.90em;
+}
+
+/* line 14, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.cont {
+  padding: 10px 50px 50px 50px;
+}
+
+/* line 17, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.newpara {
+  margin: 0 0px -30px 0px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* line 30, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.text {
+  max-width: 700px;
+}
+
+/* line 35, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.author {
+  box-sizing: border-box;
+  padding-right: 15px;
+  width: 200px;
+  text-align: right;
+  color: #007399;
+}
+
+/* line 46, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.field {
+  text-align: center;
+}
+/* line 48, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.field label {
+  color: whitesmoke;
+}
+/* line 53, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.field textarea {
+  width: 800px;
+  height: 200px;
+}
+
+/* line 60, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.actions {
+  text-align: center;
+}
+/* line 62, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.actions input {
+  padding: 10px 30px 10px 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: whitesmoke;
+  text-shadow: 1px 1px 1px #007399;
+}
+/* line 71, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.actions input:hover {
+  background-color: deepskyblue;
+}
+
+/* line 76, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.instructions {
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  max-width: 1000px;
+}
+/* line 81, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.instructions p {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 2em;
+  padding-bottom: 30px;
+  text-shadow: 1px 1px 0 rgba(140, 140, 140, 0.6), -1px -1px 1px rgba(0, 0, 0, 0.67);
+}
+/* line 88, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.instructions .h_field {
+  padding: 30px  0px 0px 0px;
+}
+
+/* line 93, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.pagination {
+  text-align: center;
+}
+/* line 94, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.pagination .previous_page {
+  color: whitesmoke;
+}
+/* line 95, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.pagination .previous_page.disabled {
+  color: #777;
+}
+/* line 96, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.pagination .current {
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 97, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.pagination .next_page {
+  color: whitesmoke;
+}
+/* line 98, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+.pagination .next_page.disabled {
+  color: #777;
+}
+
+@media all and (max-width: 600px) {
+  /* line 103, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+  .newpara {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  /* line 106, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/paragraphs.scss */
+  .newpara .author {
+    text-align: center;
+  }
+}

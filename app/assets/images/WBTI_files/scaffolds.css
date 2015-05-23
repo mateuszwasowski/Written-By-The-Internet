@@ -1,0 +1,114 @@
+/* line 1, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+/* line 24, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #b5b5b5;
+}
+
+/* line 31, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+/* line 35, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+div .h_field {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 5em;
+  padding: 30px  0px 30px 0px;
+  text-shadow: 1px 1px 0 rgba(140, 140, 140, 0.6), -1px -1px 1px rgba(0, 0, 0, 0.67);
+}
+/* line 42, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+div #min_char {
+  color: #002633;
+}
+
+/* line 50, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+.notice {
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+/* line 58, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+.alert {
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+/* line 68, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+.links {
+  color: whitesmoke;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+/* line 82, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  max-width: 1000px;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
+/* line 88, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 98, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+@media all and (max-width: 600px) {
+  /* line 104, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+  .newpara {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  /* line 107, /home/tvik/Desktop/Rails/WBTI/app/assets/stylesheets/scaffolds.scss */
+  .newpara .author {
+    text-align: center;
+  }
+}

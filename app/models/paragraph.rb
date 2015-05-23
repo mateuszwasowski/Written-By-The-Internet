@@ -1,6 +1,7 @@
 class Paragraph < ActiveRecord::Base
   
   belongs_to :user
+  belongs_to :page
   has_many :votes, dependent: :destroy
 
   

@@ -120,6 +120,10 @@ body{
   
 }
 
+.votebutton{
+
+  text-align: center;
+}
 
 
 @media all and (max-width: 800px) {
@@ -135,7 +139,7 @@ body{
     padding: 0;
   }
   
-  .header a { 
+  .header li { 
     text-align: center; 
     padding: 10px;
     border-top: 1px solid rgba(255,255,255,0.3); 
@@ -158,4 +162,3 @@ body{
   }
   }
 }
-
