@@ -2,146 +2,105 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.content{
-  box-sizing: border-box;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background-color:  rgba(0, 0, 0, 0.20);
-  color:black;
-  font-size:0.90em;
-}
-.cont{
- padding:10px 50px 50px 50px;
-}
-.newpara{
+@import "variables";
 
-  margin:0 0px -30px 0px;
+.cont { padding: 10px 50px 50px 50px;}
+
+.newpara {
+  margin: 0 0px -30px 0px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
-  
 }
-.text{
 
-  max-width:700px;
+.text { max-width: 700px; }
 
-}
-.author{
-
+.author {
   box-sizing: border-box;
   padding-right: 15px;
-  width:200px;
-
+  width: 200px;
   text-align: right;
-  color:darken(deepskyblue,20%);
-  
+  color: $color1;
 }
 
 .field {
- text-align: center;
-  label{
-   color:whitesmoke;
-
-  }
-  
-  textarea{
-    width:800px;
-    height:200px;
-
-  }
-  
+  text-align: center;
+  label { color: $textcolor1; }
+  textarea {width: 800px; height: 200px; }
 }
-.actions{
-text-align: center;
-  input{
-    
+
+.actions {
+  text-align: center;
+  input {
     padding: 10px 30px 10px 30px;
-    background-color: rgba(0, 0, 0, 0.20);
+    background-color: rgba(0, 0, 0, 0.2);
     border: none;
-    color: whitesmoke;
-
-    text-shadow: 1px 1px 1px darken(deepskyblue,20%);
+    color: $textcolor1;
+    text-shadow: 1px 1px 1px $color1;
   }
-  input:hover{
-    
-    background-color:darken(deepskyblue,0);
+  input:hover {
+    background-color: $maincolor;
   }
 }
-.instructions{
-  
- 
-  border:2px solid rgba(0, 0, 0, 0.02);
+
+.instructions {
+  border: $smallerborder;
   max-width: 1000px;
-  p{
+  p {
     text-align: center;
-    color: whitesmoke;
+    color: $textcolor1;
     font-size: 2em;
     padding-bottom: 30px;
-    text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
+    text-shadow: 1px 1px 0 rgba(140, 140, 140, 0.6), -1px -1px 1px rgba(0, 0, 0, 0.67);
   }
-  .h_field{
-   padding: 30px  0px 0px 0px; 
+  .h_field {
+    padding: 30px  0px 0px 0px;
+    font-size: 3em;
   }
-  
-  a{
-    color:black;
-  }
+  a { color: $textcolor2; }
 }
 
 .pagination {
-  .previous_page {  color:whitesmoke }
-  .previous_page.disabled { color: #777 }
-  .current { background:rgba(0, 0, 0, 0.10) }
-  .next_page {  color: whitesmoke }
-  .next_page.disabled { color: #777 }
+  .previous_page { color: $textcolor1; }
+  .previous_page.disabled { color: #777; }
+  .current { background: rgba(0, 0, 0, 0.1); }
+  .next_page { color: $textcolor1; }
+  .next_page.disabled { color: #777; }
   text-align: center;
-  
-  a, span{
-   padding: 5px 10px 5px 10px;
-   background-color:darken(deepskyblue,25%);
-   
- 
-}
+  a, span {
+    padding: 5px 10px 5px 10px;
+    background-color: $color2;
+  }
 }
 
-.votebutton{
+.votebutton {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  
   -webkit-flex-flow: row wrap;
   justify-content: flex-end;
-  position:relative;
-  bottom:30px;
+  position: relative;
+  bottom: 30px;
   right: 50px;
-  
-  a{
-   color:black;
+  a {
+    color: $textcolor2;
     margin-right: 5px;
     margin-left: 5px;
   }
-  input{
-  margin-right: 10px;
-  }
+  input { margin-right: 10px; }
 }
 
 @media all and (max-width: 600px) {
-  .newpara{
- flex-wrap: wrap;
-justify-content: space-around;
-    .author{
-     text-align: center; 
-    }
-  
-}
-  
-
+  .newpara {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .author { text-align: center; }
+  }
+  .cont { padding: 0px; }
 }

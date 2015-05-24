@@ -1,0 +1,16 @@
+//main color scheme
+$colororiginal: deepskyblue;
+$maincolor: darken( $colororiginal , 15%);
+$color1: darken( $colororiginal , 20%);
+$color2: darken( $colororiginal , 25%);
+$color3: whitesmoke;
+
+//text colors
+
+$textcolor1: whitesmoke;
+$textcolor2: black;
+
+//other
+
+$smallborder: 2px solid rgba(0, 0, 0, 0.08);
+$smallerborder: 2px solid rgba(0, 0, 0, 0.02);
