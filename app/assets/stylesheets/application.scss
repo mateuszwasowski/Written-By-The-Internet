@@ -86,8 +86,9 @@ body {
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
   li {
+    flex-grow: 1;
     padding: 1em;
-    width: 400px;
+    width: 300px;
     font-size: 1em;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.2);
