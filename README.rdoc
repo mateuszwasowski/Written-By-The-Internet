@@ -1,28 +1,11 @@
-== README
+== WrittenByTheInternet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*ruby 2.2.1p85
+*rails 4.2.0
 
-Things you may want to cover:
+It's a simple site made for practice purposes, in order to get a better understanding of the Rails framework and to increase my skills as a web developer. Although not as fancy as I originally wanted it to be (due to lack of time), given that this is my first non-static app I'm pretty proud of it.
 
-* Ruby version
+Idea behind the site:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Users submit their paragraph propositions , which then are viewed and voted by other users. After some time an admin may publish one of the most voted paragraphs which in his understanding best fits to the already published ones a.k.a. "The Book". All other propositions are then deleted and the game resets.
+The goal is to create a community driven book/story for all users to have a part in.
