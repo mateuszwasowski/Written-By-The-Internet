@@ -11,7 +11,7 @@ class PagesController < ApplicationController
       @next_page = @last_page
     end
     
-    @paragraphs = Paragraph.where( :main => true, :main_id => @page)
+    @paragraphs = Paragraph.where( :main => true, :main_id => @page).order("created_at")
     
   end
 
