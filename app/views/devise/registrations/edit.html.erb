@@ -1,4 +1,4 @@
-<div class = "h_field">Edit <%= resource_name.to_s.humanize %></div>
+<div class="instructions"><div class = "h_field">Edit <%= resource_name.to_s.humanize %></div></div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
