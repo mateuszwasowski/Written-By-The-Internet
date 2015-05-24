@@ -50,6 +50,7 @@
 .instructions {
   border: $smallerborder;
   max-width: 1000px;
+  padding-bottom: 30px;
   p {
     text-align: center;
     color: $textcolor1;
@@ -60,6 +61,8 @@
   .h_field {
     padding: 30px  0px 0px 0px;
     font-size: 3em;
+     text-align: center;
+    color: $textcolor1;
   }
   a { color: $textcolor2; }
 }
